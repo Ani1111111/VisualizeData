@@ -8,11 +8,8 @@ import seaborn as sns
 import io
 from mpl_toolkits.mplot3d import Axes3D
 import numpy as np
-from flask_cors import CORS
 from loguru import logger
-cors = CORS()
 app = Flask(__name__)
-CORS(app)
 
 def clean_numeric_data(df):
     """ Convert columns to numeric, if possible, and handle errors """
