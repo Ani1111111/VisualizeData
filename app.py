@@ -184,6 +184,10 @@ def generate_plot(df, plot_type, column_name=None):
     
     return img, None
 
+@app.route('/', methods = ['GET'])
+def home():
+    return 'Home'
+
 @app.route('/upload', methods=['POST'])
 def upload_file():
     if 'file' not in request.files:
